@@ -4,12 +4,16 @@
 // set token amount
 // set way to read total number of tokens
 
-pragma solidity ^0.4.2; //declares version of solidity
+pragma solidity ^0.4.2; //declare version of solidity
 
 contract DappToken {
-    uint256 public totalSupply;  
+    uint256 public totalSupply;
+    
+    mapping(address => uint256) public balanceOf;
 
-    function DappToken () public {
-        totalSupply = 1000000;
+    function DappToken (uint256 _initialSupply) public {
+        balanceOf[msg.sender] = _initialSupply;
+        totalSupply = _initialSupply;
+        // allocate inital supply
     }
-}
+} 
