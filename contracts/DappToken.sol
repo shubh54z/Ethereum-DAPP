@@ -21,6 +21,8 @@ contract DappToken {
         address indexed _to,
         uint256 _value
     );
+
+    //transfer
     
     mapping(address => uint256) public balanceOf;
 
@@ -38,4 +40,10 @@ contract DappToken {
         Transfer(msg.sender, _to, _value);
         return true;
     }
+//approve function
+    function approve(address _spender, uint256 _value) public returns (bool success) {
+        
+    }
+
+
 } 
