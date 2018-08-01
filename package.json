@@ -1,24 +1,28 @@
 {
-  "name": "blockchain",
+  "name": "blockchain-token-sale",
   "version": "1.0.0",
-  "description": "",
+  "description": "Decentralized Application Token Sale ICO",
   "main": "truffle.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
+    "npm": "^6.2.0",
     "solc": "^0.4.24",
     "truffle": "^4.1.13"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TerryKemp/project4.git"
   },
-  "author": "",
+  "author": "Terry Kemp",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TerryKemp/project4/issues"
