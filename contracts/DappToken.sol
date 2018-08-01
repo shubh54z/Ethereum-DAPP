@@ -1,19 +1,9 @@
-// using erc20 standard to govern behavior of currency
-
-// need a constructor to run when contract is deploy
-// set token amount
-// set way to read total number of tokens
-
-pragma solidity ^0.4.2; //declare version of solidity
+pragma solidity ^0.4.2;
 
 contract DappToken {
-    //name
-    string public name = "DApp Token";
-    //symbol
-    string public symbol = "DAPP";
-    //standard
-    string public standard = "DApp Token v1.0";
-
+    string  public name = "DApp Token";
+    string  public symbol = "DAPP";
+    string  public standard = "DApp Token v1.0";
     uint256 public totalSupply;
 
     event Transfer(
@@ -22,45 +12,50 @@ contract DappToken {
         uint256 _value
     );
 
-    //Approve 
     event Approval(
         address indexed _owner,
         address indexed _spender,
         uint256 _value
     );
-    
+
     mapping(address => uint256) public balanceOf;
-    //create allowance
     mapping(address => mapping(address => uint256)) public allowance;
 
     function DappToken (uint256 _initialSupply) public {
         balanceOf[msg.sender] = _initialSupply;
         totalSupply = _initialSupply;
-        // allocate inital supply
     }
 
-    // transfer of coins
     function transfer(address _to, uint256 _value) public returns (bool success) {
         require(balanceOf[msg.sender] >= _value);
+
         balanceOf[msg.sender] -= _value;
         balanceOf[_to] += _value;
+
         Transfer(msg.sender, _to, _value);
+
         return true;
     }
-//approve function
+
     function approve(address _spender, uint256 _value) public returns (bool success) {
         allowance[msg.sender][_spender] = _value;
+
         Approval(msg.sender, _spender, _value);
+
         return true;
     }
-    //transfer from
+
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
         require(_value <= balanceOf[_from]);
         require(_value <= allowance[_from][msg.sender]);
+
         balanceOf[_from] -= _value;
         balanceOf[_to] += _value;
+
         allowance[_from][msg.sender] -= _value;
+
         Transfer(_from, _to, _value);
+
         return true;
     }
-} 
+}
