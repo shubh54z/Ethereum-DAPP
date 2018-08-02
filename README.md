@@ -17,5 +17,6 @@ https://github.com/ethereum/go-ethereum/wiki/geth
 
 The command line interfeace to run a full ethereum node in GO.
 
-
+# What is needed.
+You will need to add the METAMASK chrome extension to make the program run in your Chrome Browser.
 
