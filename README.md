@@ -4,5 +4,5 @@ Dapp Token is a Decentralized Application on the Ethereum BlockChain Network.  U
 
 #ERC20
 The Ethereum Token Standard, is used for smart contracts on the blockchain.
-https://eips.ethereum.org/EIPS/eip-20
+https://eips.ethereum.org/EIPS/eip-20 / 
 https://github.com/ethereum/EIPs
