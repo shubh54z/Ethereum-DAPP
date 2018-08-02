@@ -1,0 +1,24 @@
+# Ethereum DAPP
+
+Dapp Token is a Decentralized Application on the Ethereum BlockChain Network.  Utilizing the ERC-20 Standards, Solidity programming language, Truffle, Ganache and GO Etherum(GETH), Rinkeby Test Network, MetaMask chrome add-on and an ICO website.
+
+# ERC20 / EIPs
+The Ethereum Token Standard, is used for smart contracts on the blockchain.
+https://eips.ethereum.org/EIPS/eip-20 / 
+https://github.com/ethereum/EIPs
+
+# Solidity
+https://github.com/ethereum/solidity
+
+Solidity is the primary language used on the Ethereum BlockChain. 
+
+# Go Eretheum (GETH)
+https://github.com/ethereum/go-ethereum/wiki/geth
+
+The command line interfeace to run a full ethereum node in GO.
+
+# What is needed.
+You will need to add the METAMASK chrome extension to make the program run in your Chrome Browser.
+
+
+
